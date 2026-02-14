@@ -1,11 +1,16 @@
 "use strict";
+// const name: string = 'Mutasem';
+// enum Role {
+//     ADMIN = 1,
+//     USER = 2
+// }
+// console.log(name);
+// console.log(Role.ADMIN);
 Object.defineProperty(exports, "__esModule", { value: true });
-const name = 'Mutasem';
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 1] = "ADMIN";
-    Role[Role["USER"] = 2] = "USER";
-})(Role || (Role = {}));
-console.log(name);
-console.log(Role.ADMIN);
+// Core types & type inference
+let name = 'Mutasem';
+let age = 21;
+let isAdmin = true;
+let hobbies = ['Reading', 'Coding'];
+hobbies.push('Traveling');
 //# sourceMappingURL=index.js.map
