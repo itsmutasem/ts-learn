@@ -22,3 +22,10 @@ students = [
     {name: 'Mohammad', age: 23, isStudent: true}
 ];
 console.log(students);
+
+let user: { name:string, age?:number} | null = null;
+console.log("user before assignment", user);
+user = {name: 'Mutasem', age: 21};
+console.log("user after assignment", user);
+user = null;
+console.log("user after assignment to null", user);
