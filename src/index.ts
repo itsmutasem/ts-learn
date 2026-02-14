@@ -22,10 +22,19 @@ students = [
     {name: 'Mohammad', age: 23, isStudent: true}
 ];
 console.log(students);
-
+// null
 let user: { name:string, age?:number} | null = null;
 console.log("user before assignment", user);
 user = {name: 'Mutasem', age: 21};
 console.log("user after assignment", user);
 user = null;
 console.log("user after assignment to null", user);
+// json
+let json: { name:string, age:number} | unknown = JSON.parse('{"name": "Mutasem json", "age": "21"}');
+console.log(json);
+if(typeof json === 'object' && json !== null && "name" in json){
+    console.log("its object", json);
+    console.log(json.name);
+} else {
+    console.log('json is not an object', json);
+}
