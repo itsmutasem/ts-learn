@@ -12,3 +12,5 @@ let age: number = 21;
 let isAdmin: boolean = true;
 let hobbies: string[] = ['Reading', 'Coding'];
 hobbies.push('Traveling');
+// objects
+let student: { name:string, age:number, isStudent:boolean} = {name: 'Mutasem', age: 21, isStudent: true};

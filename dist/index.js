@@ -13,4 +13,6 @@ let age = 21;
 let isAdmin = true;
 let hobbies = ['Reading', 'Coding'];
 hobbies.push('Traveling');
+// objects
+let student = { name: 'Mutasem', age: 21, isStudent: true };
 //# sourceMappingURL=index.js.map
