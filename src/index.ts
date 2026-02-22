@@ -45,3 +45,13 @@ function add(a: number, b: number): number {
 }
 const result = add(1, 2);
 console.log(result);
+// type
+type User = { name: string, age: number};
+function isValidUser(user: User): User {
+    if (user.name === 'Mutasem') {
+        return user;
+    }
+    throw new Error('User is not valid');
+}
+const user: User = isValidUser({name: 'Mutasem', age: 21});
+console.log(user);
