@@ -39,19 +39,31 @@
 //     console.log('json is not an object', json);
 // }
 
-// functions
-function add(a: number, b: number): number {
-    return a + b;
-}
-const result = add(1, 2);
-console.log(result);
-// type
-type User = { name: string, age: number};
-function isValidUser(user: User): User | never {
-    if (user.name === 'Mutasem') {
-        return user;
+// // functions
+// function add(a: number, b: number): number {
+//     return a + b;
+// }
+// const result = add(1, 2);
+// console.log(result);
+// // type
+// type User = { name: string, age: number};
+// function isValidUser(user: User): User | never {
+//     if (user.name === 'Mutasem') {
+//         return user;
+//     }
+//     throw new Error('User is not valid');
+// }
+// const user = isValidUser({name: 'Mutasem', age: 21});
+// console.log(user);
+
+// union types and type narrowing
+type User ={ name: string, age: number };
+type StatusCode = 200 | 400;
+type ApiResponse = { data: User | null, status: StatusCode };
+function handleApiResponse(response: ApiResponse): void {
+    if(response.status === 200){
+        console.log('success', response.data);
+    } else {
+        console.log('error', response.status);
     }
-    throw new Error('User is not valid');
 }
-const user = isValidUser({name: 'Mutasem', age: 21});
-console.log(user);
