@@ -68,28 +68,59 @@
 //     }
 // }
 
-// interfaces and type aliases
-interface User {
+// // interfaces and type aliases
+// interface User {
+//     name: string;
+//     age: number;
+// } /* & { role: "admin" | "user" }; */
+//
+// interface User {
+//     role: "admin" | "user";
+// }
+//
+// type UserResponse = {
+//     data: User;
+//     status: 200 | 400;
+// }
+//
+// function getUser(name: string): UserResponse {
+//     return {
+//         data: {
+//             name: "Mutasem",
+//             age: 21,
+//             role: "admin"
+//         },
+//         status: 200
+//     }
+// }
+
+
+// Tuples and enums
+enum Role {
+    ADMIN = "admin",
+    USER = "user",
+}
+type User = {
     name: string;
     age: number;
-} /* & { role: "admin" | "user" }; */
-
-interface User {
-    role: "admin" | "user";
+    role: Role;
 }
-
-type UserResponse = {
-    data: User;
-    status: 200 | 400;
-}
-
-function getUser(name: string): UserResponse {
+function getUser(name: string): User {
     return {
-        data: {
-            name: "Mutasem",
-            age: 21,
-            role: "admin"
-        },
-        status: 200
+        name: name,
+        age: 21,
+        role: Role.ADMIN
     }
+}
+
+// type Coordinates = [number[], () => void];
+// const coordinates: Coordinates = [[10, 20, 234], () => {
+//     console.log('hello');
+// }];
+
+type Coordinates = {
+    x: number;
+    y: number;
+    z: number;
+    print: (coordinates: Coordinates) => void;
 }
