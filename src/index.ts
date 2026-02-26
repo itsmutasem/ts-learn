@@ -72,7 +72,24 @@
 interface User {
     name: string;
     age: number;
-}
+} /* & { role: "admin" | "user" }; */
+
 interface User {
     role: "admin" | "user";
+}
+
+type UserResponse = {
+    data: User;
+    status: 200 | 400;
+}
+
+function getUser(name: string): UserResponse {
+    return {
+        data: {
+            name: "Mutasem",
+            age: 21,
+            role: "admin"
+        },
+        status: 200
+    }
 }
