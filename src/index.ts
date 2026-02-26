@@ -56,14 +56,20 @@
 // const user = isValidUser({name: 'Mutasem', age: 21});
 // console.log(user);
 
-// union types and type narrowing
-type User ={ name: string, age: number };
-type StatusCode = 200 | 400;
-type ApiResponse = { data: User | null, status: StatusCode };
-function handleApiResponse(response: ApiResponse): void {
-    if(response.status === 200){
-        console.log('success', response.data);
-    } else {
-        console.log('error', response.status);
-    }
+// // union types and type narrowing
+// type User ={ name: string, age: number };
+// type StatusCode = 200 | 400;
+// type ApiResponse = { data: User | null, status: StatusCode };
+// function handleApiResponse(response: ApiResponse): void {
+//     if(response.status === 200){
+//         console.log('success', response.data);
+//     } else {
+//         console.log('error', response.status);
+//     }
+// }
+
+// interfaces and type aliases
+interface User {
+    name: string;
+    age: number;
 }
