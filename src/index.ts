@@ -73,3 +73,6 @@ interface User {
     name: string;
     age: number;
 }
+interface User {
+    role: "admin" | "user";
+}
