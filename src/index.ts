@@ -140,5 +140,15 @@ class User {
     }
 }
 
+class Admin extends User {
+    constructor(name: string, age: number, role: string) {
+        super(name, age);
+    }
+    getAdmin(): string {
+        return this.name;
+    }
+}
+
 const user = new User('Mutasem', 21);
+const admin = new Admin('Ali', 22, 'admin');
 console.log(user.getUser());
