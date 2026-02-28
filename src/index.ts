@@ -135,6 +135,10 @@ class User {
         this.age = age;
         this.major = 'Computer Science';
     }
+    public getUser(): string {
+        return this.name;
+    }
 }
 
 const user = new User('Mutasem', 21);
+console.log(user.getUser());
