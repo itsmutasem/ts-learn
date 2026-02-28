@@ -129,8 +129,12 @@
 class User {
     public name: string;
     public age: number;
+    private readonly major: string;
     constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
+        this.major = 'Computer Science';
     }
 }
+
+const user = new User('Mutasem', 21);
