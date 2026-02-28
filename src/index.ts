@@ -95,32 +95,42 @@
 // }
 
 
-// Tuples and enums
-enum Role {
-    ADMIN = "admin",
-    USER = "user",
-}
-type User = {
-    name: string;
-    age: number;
-    role: Role;
-}
-function getUser(name: string): User {
-    return {
-        name: name,
-        age: 21,
-        role: Role.ADMIN
+// // Tuples and enums
+// enum Role {
+//     ADMIN = "admin",
+//     USER = "user",
+// }
+// type User = {
+//     name: string;
+//     age: number;
+//     role: Role;
+// }
+// function getUser(name: string): User {
+//     return {
+//         name: name,
+//         age: 21,
+//         role: Role.ADMIN
+//     }
+// }
+//
+// // type Coordinates = [number[], () => void];
+// // const coordinates: Coordinates = [[10, 20, 234], () => {
+// //     console.log('hello');
+// // }];
+//
+// type Coordinates = {
+//     x: number;
+//     y: number;
+//     z: number;
+//     print: (coordinates: Coordinates) => void;
+// }
+
+// classes and abstraction
+class User {
+    public name: string;
+    public age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
     }
-}
-
-// type Coordinates = [number[], () => void];
-// const coordinates: Coordinates = [[10, 20, 234], () => {
-//     console.log('hello');
-// }];
-
-type Coordinates = {
-    x: number;
-    y: number;
-    z: number;
-    print: (coordinates: Coordinates) => void;
 }
