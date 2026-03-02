@@ -167,3 +167,17 @@ interface Repository<T extends Entity> {
     findAll(): T[];
     delete(id: number): void;
 }
+// Implementation
+class InMemoryRepository<T extends Entity> implements Repository<T> {
+    private entities: T[] = [];
+    save(entity: T): void {
+        this.entities.push(entity);
+    }
+    findById(id: number): T {
+        const entity = this.entities.find(entity => entity.id === id)!;
+        if (!entity) {
+            throw new Error(`Entity with id ${id} not found`);
+        }
+        return entity;
+    }
+}
